@@ -1,116 +1,284 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Mohan Balaji</title>
-  <style>
-    body {
-      font-family: "Segoe UI", sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #1f2937, #111827);
-      color: #f9fafb;
-      line-height: 1.6;
-    }
-    header {
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0;
-      color: #facc15;
-    }
-    header p {
-      font-size: 1.2rem;
-      color: #d1d5db;
-    }
-    section {
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-    h2 {
-      color: #facc15;
-      border-bottom: 2px solid #facc15;
-      padding-bottom: 0.3rem;
-    }
-    .card {
-      background: #1f2937;
-      padding: 1.5rem;
-      margin: 1rem 0;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      transition: transform 0.2s ease-in-out;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: #9ca3af;
-    }
-    a {
-      color: #facc15;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badri Mohan Balaji | Developer & Tech Enthusiast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e2e8f0;
+        }
+        .glass-effect {
+            background: rgba(23, 23, 23, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .skill-card {
+            background: #171717;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+        .project-card {
+            background: #171717;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: border-color 0.3s ease;
+        }
+        .project-card:hover {
+            border-color: #38bdf8;
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <h1>Mohan Balaji</h1>
-    <p>CSE Student | Developer | Tech Explorer</p>
-  </header>
+<body class="antialiased">
+    <!-- Header -->
+    <header id="home" class="fixed top-0 left-0 right-0 z-50 glass-effect">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold gradient-text">Mohan Balaji</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-slate-300 hover:text-sky-400 transition-colors duration-300">About</a>
+                <a href="#skills" class="text-slate-300 hover:text-sky-400 transition-colors duration-300">Skills</a>
+                <a href="#projects" class="text-slate-300 hover:text-sky-400 transition-colors duration-300">Projects</a>
+                <a href="#contact" class="text-slate-300 hover:text-sky-400 transition-colors duration-300">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu" class="h-6 w-6 text-slate-300"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-slate-300 hover:text-sky-400">About</a>
+            <a href="#skills" class="block py-2 text-slate-300 hover:text-sky-400">Skills</a>
+            <a href="#projects" class="block py-2 text-slate-300 hover:text-sky-400">Projects</a>
+            <a href="#contact" class="block py-2 text-slate-300 hover:text-sky-400">Contact</a>
+        </div>
+    </header>
 
-  <section>
-    <h2>About Me</h2>
-    <div class="card">
-      <p>
-        Hi 👋 I'm <strong>Mohan Balaji</strong>, a Computer Science student with a passion for building projects,
-        exploring new technologies, and pushing myself to grow as a developer. I love learning by doing —
-        whether it’s coding small command-line tools, experimenting with AI & voice tech, or building 2D
-        simulations from scratch.
-      </p>
-    </div>
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="container mx-auto px-6 py-24 md:py-32 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tighter mb-4">
+                    Badrimohan <span class="gradient-text">"Mohan"</span> Balaji
+                </h1>
+                <p class="text-lg md:text-xl text-slate-400 mb-8">
+                    First-year CSE student, self-driven developer, and aspiring "coding ninja" from India. I build practical solutions and explore the intersections of AI, security, and web development.
+                </p>
+                <div class="flex justify-center items-center space-x-4">
+                    <a href="https://github.com/your-github-username" target="_blank" class="bg-slate-800 text-slate-300 hover:bg-slate-700 transition-colors duration-300 px-6 py-3 rounded-lg font-semibold flex items-center space-x-2">
+                        <i data-lucide="github" class="h-5 w-5"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="#contact" class="border border-sky-500 text-sky-400 hover:bg-sky-500 hover:text-white transition-colors duration-300 px-6 py-3 rounded-lg font-semibold">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </section>
 
-    <h2>What I Do</h2>
-    <div class="card">
-      <ul>
-        <li>💻 Build projects in <strong>Python</strong>, from CLI tools to real-time voice detection systems.</li>
-        <li>🌐 Learning <strong>frontend development</strong> (HTML, CSS, JavaScript) and hosting sites on GitHub Pages.</li>
-        <li>☁️ Exploring <strong>Cloud</strong> (Google Cloud, AWS) and DevOps basics.</li>
-        <li>🕹️ Interested in <strong>games</strong>, F1, WWE, and experimenting with game engines like Godot & Pygame.</li>
-        <li>📚 like to read sci-fi like Project Hail Mary.</li>
-      </ul>
-    </div>
+        <!-- About Me Section -->
+        <section id="about" class="py-20 bg-black bg-opacity-20">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-5 gap-12 items-center">
+                    <div class="md:col-span-3">
+                        <h2 class="text-3xl font-bold mb-4 gradient-text">About Me</h2>
+                        <p class="text-slate-400 mb-4">
+                            I'm a first-year Computer Science & Engineering student with a relentless drive to learn by building. While my college curriculum provides the foundation, I spend my time diving deep into real-world applications—from crafting AI-powered voice detection systems in Python to exploring the security vulnerabilities of web applications.
+                        </p>
+                        <p class="text-slate-400 mb-4">
+                            My journey started with a command-line project I built in under 12 hours with zero prior experience, and that initial spark has only grown. I'm passionate about simplifying complex topics, whether it's mastering data structures or tuning an automotive ECU. My goal is to bridge the gap between theoretical knowledge and practical, impactful technology.
+                        </p>
+                        <p class="text-slate-400">
+                            When I'm not coding, you can find me lost in a long fiction series like Percy Jackson or Artemis Fowl. I believe a great story and a great piece of code have something in common: elegant structure and a compelling purpose.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 flex justify-center">
+                        <div class="w-64 h-64 rounded-full bg-slate-800 border-4 border-sky-500 overflow-hidden shadow-2xl">
+                            <!-- Placeholder for an image. Replace with your own photo URL. -->
+                            <img src="https://placehold.co/400x400/0a0a0a/38bdf8?text=MB" alt="Mohan Balaji" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <h2>My Philosophy</h2>
-    <div class="card">
-      <p>
-        I believe in learning by doing. For me, every project is an experiment — a chance to push limits,
-        fail fast, and improve. My goal is to become a “coding ninja,” mastering computer science fundamentals
-        while building cool, real-world applications.
-      </p>
-    </div>
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold gradient-text">My Tech Stack</h2>
+                    <p class="text-slate-400 mt-2 max-w-2xl mx-auto">
+                        A collection of tools and technologies I use to bring ideas to life. Always learning, always experimenting.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Python & Data Science -->
+                    <div class="skill-card p-6 rounded-lg text-center">
+                        <i data-lucide="cpu" class="h-10 w-10 mx-auto mb-4 text-sky-400"></i>
+                        <h3 class="font-semibold mb-2">Python & AI</h3>
+                        <p class="text-slate-400 text-sm">PyAudio, WebRTC VAD, NumPy, Matplotlib</p>
+                    </div>
+                    <!-- Frontend Development -->
+                    <div class="skill-card p-6 rounded-lg text-center">
+                        <i data-lucide="code" class="h-10 w-10 mx-auto mb-4 text-sky-400"></i>
+                        <h3 class="font-semibold mb-2">Frontend Web Dev</h3>
+                        <p class="text-slate-400 text-sm">HTML, CSS, JavaScript, Tailwind CSS</p>
+                    </div>
+                    <!-- Version Control & Deployment -->
+                    <div class="skill-card p-6 rounded-lg text-center">
+                        <i data-lucide="git-branch-plus" class="h-10 w-10 mx-auto mb-4 text-sky-400"></i>
+                        <h3 class="font-semibold mb-2">Tools & Deployment</h3>
+                        <p class="text-slate-400 text-sm">Git, GitHub, Vercel, Google Cloud</p>
+                    </div>
+                    <!-- Security -->
+                    <div class="skill-card p-6 rounded-lg text-center">
+                        <i data-lucide="shield" class="h-10 w-10 mx-auto mb-4 text-sky-400"></i>
+                        <h3 class="font-semibold mb-2">Security & Pentesting</h3>
+                        <p class="text-slate-400 text-sm">Hydra, GoBuster, Basic Recon</p>
+                    </div>
+                    <!-- Automotive Tech -->
+                    <div class="skill-card p-6 rounded-lg text-center">
+                        <i data-lucide="car" class="h-10 w-10 mx-auto mb-4 text-sky-400"></i>
+                        <h3 class="font-semibold mb-2">Automotive Tech</h3>
+                        <p class="text-slate-400 text-sm">ECU Tuning, KESS V2, WinOLS</p>
+                    </div>
+                    <!-- Game Development -->
+                    <div class="skill-card p-6 rounded-lg text-center">
+                        <i data-lucide="gamepad-2" class="h-10 w-10 mx-auto mb-4 text-sky-400"></i>
+                        <h3 class="font-semibold mb-2">Game Development</h3>
+                        <p class="text-slate-400 text-sm">Godot, Pygame (Experimenting)</p>
+                    </div>
+                     <!-- Core CS -->
+                    <div class="skill-card p-6 rounded-lg text-center">
+                        <i data-lucide="brain-circuit" class="h-10 w-10 mx-auto mb-4 text-sky-400"></i>
+                        <h3 class="font-semibold mb-2">CS Fundamentals</h3>
+                        <p class="text-slate-400 text-sm">Data Structures, Algorithms</p>
+                    </div>
+                     <!-- Languages -->
+                    <div class="skill-card p-6 rounded-lg text-center">
+                        <i data-lucide="languages" class="h-10 w-10 mx-auto mb-4 text-sky-400"></i>
+                        <h3 class="font-semibold mb-2">Languages</h3>
+                        <p class="text-slate-400 text-sm">Telugu (Native), English (Fluent)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <h2>Connect With Me</h2>
-    <div class="card">
-      <p>
-        🌍 Personal site: <a href="https://badrimohanbalaji.tech">badrimohanbalaji.tech</a><br>
-        📂 GitHub: <a href="https://github.com/mohan-4848">github.com/Mohan-4848</a><br>
-        📸 Instagram <a href="https://www.instagram.com/mohanbalaji4848/">mohanbalaji4848</a>
-      </p>
-    </div>
-  </section>
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-black bg-opacity-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold gradient-text">Projects & Experiments</h2>
+                    <p class="text-slate-400 mt-2 max-w-2xl mx-auto">
+                        Here are a few things I've built. Each project taught me something new.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Project 1 -->
+                    <div class="project-card rounded-lg overflow-hidden p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-slate-100">Real-time Voice Detection AI</h3>
+                        <p class="text-slate-400 mb-4">
+                            A personal AI system that listens to ambient audio, detects human speech using WebRTC's Voice Activity Detection (VAD), and controls system volume. Built purely in Python, it's an exploration into real-time audio processing and practical AI.
+                        </p>
+                        <div class="flex items-center space-x-4">
+                            <a href="#" class="text-sky-400 hover:text-sky-300 font-semibold flex items-center space-x-1">
+                                <i data-lucide="github" class="h-4 w-4"></i>
+                                <span>Source Code</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card rounded-lg overflow-hidden p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-slate-100">Personal Portfolio Website</h3>
+                        <p class="text-slate-400 mb-4">
+                            My personal corner of the internet. This site itself is a project, built with HTML, Tailwind CSS, and deployed via GitHub Pages. It’s my digital resume and a playground for new frontend techniques.
+                        </p>
+                        <div class="flex items-center space-x-4">
+                            <a href="#" class="text-sky-400 hover:text-sky-300 font-semibold flex items-center space-x-1">
+                                <i data-lucide="github" class="h-4 w-4"></i>
+                                <span>Source Code</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 3 - Anandh mention -->
+                     <div class="project-card rounded-lg overflow-hidden p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-slate-100">CLI Adventure Game</h3>
+                        <p class="text-slate-400 mb-4">
+                            My very first coding project, a simple text-based adventure game built in under 12 hours. It's a testament to rapid learning and a reminder of where my journey began. Idea inspired by a late-night chat with my friend <span class="font-semibold text-sky-400">Anandh</span>.
+                        </p>
+                        <div class="flex items-center space-x-4">
+                            <a href="#" class="text-sky-400 hover:text-sky-300 font-semibold flex items-center space-x-1">
+                                <i data-lucide="terminal" class="h-4 w-4"></i>
+                                <span>View Snippet</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <footer>
-    <p>© 2025 Mohan Balaji | Built with ❤️ and GitHub Pages</p>
-  </footer>
+    <!-- Footer -->
+    <footer id="contact" class="py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Let's Connect</h2>
+            <p class="text-slate-400 max-w-xl mx-auto mb-8">
+                I'm always open to new ideas, collaborations, or just a chat about tech. Feel free to reach out!
+            </p>
+            <div class="flex justify-center items-center space-x-6 mb-8">
+                <a href="https://github.com/your-github-username" target="_blank" class="text-slate-400 hover:text-sky-400 transition-colors">
+                    <i data-lucide="github" class="h-7 w-7"></i>
+                </a>
+                <a href="#" target="_blank" class="text-slate-400 hover:text-sky-400 transition-colors">
+                    <i data-lucide="linkedin" class="h-7 w-7"></i>
+                </a>
+                <a href="mailto:your-email@example.com" class="text-slate-400 hover:text-sky-400 transition-colors">
+                    <i data-lucide="mail" class="h-7 w-7"></i>
+                </a>
+            </div>
+            <p class="text-slate-500 text-sm">
+                Aspiring to build the future at <a href="#" class="font-semibold hover:text-sky-400">badrimohanbalaji.tech</a>
+            </p>
+            <p class="text-slate-600 text-xs mt-2">
+                Designed & Built by Badrimohan Balaji
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const navLinks = document.querySelectorAll('#mobile-menu a, header nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
